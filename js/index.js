@@ -48,10 +48,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //NAV
 
+//create the variable and where you want your data to go(what tag, ID, or className)
 let navLinks = document.getElementsByTagName('a');
+
+//use [index] to establish an order of items on the same tag. since otherwise identical there is no need to create a new variable fo reach one.
+
+// . textContent to let the DOM know that you are adding content(specifically text) to the item.
+
+// siteContent.`tag/className/ID of where these elements are`[the name of the item given to you in the data]
 navLinks[0].textContent = siteContent.nav['nav-item-1'];
 navLinks[1].textContent = siteContent.nav['nav-item-2'];
 navLinks[2].textContent = siteContent.nav['nav-item-3'];
 navLinks[3].textContent = siteContent.nav['nav-item-4'];
 navLinks[4].textContent = siteContent.nav['nav-item-5'];
 navLinks[5].textContent = siteContent.nav['nav-item-6'];
+
+//CTA-TEXT
+
+let ctaHead = document.querySelector('.cta-text h1');
+ctaHead.textContent = siteContent['cta']['h1'];
