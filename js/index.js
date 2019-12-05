@@ -63,6 +63,30 @@ navLinks[3].textContent = siteContent.nav['nav-item-4'];
 navLinks[4].textContent = siteContent.nav['nav-item-5'];
 navLinks[5].textContent = siteContent.nav['nav-item-6'];
 
+/* task 3! green links */
+/* using a for statement to change the color*/
+for (let link of navLinks) {
+  link.style.color = 'green';
+};
+
+/* prepend and append two new nav links */
+/* create a new variable to grab the entire nav tag so that you can prepend and append to it! */
+let nav = document.querySelector('nav');
+
+let firstNewNav = document.createElement('a');
+firstNewNav.textContent ='Schedule';
+firstNewNav.style.color = 'green';
+//had to add the style.color to each one because it would not do it with my for statement
+
+let lastNewNav = document.createElement('a');
+lastNewNav.textContent ='Kitty';
+lastNewNav.style.color = 'green';
+
+nav.prepend(firstNewNav);
+nav.appendChild(lastNewNav);
+nav.style.backgroundColor = 'black';
+
+
 //CTA-TEXT header and button
 
 // using querySelector will help me to find the exact className and tag
@@ -71,6 +95,7 @@ ctaHead.textContent = siteContent['cta']['h1'];
 
 let ctaButton = document.querySelector('button');
 ctaButton.textContent = siteContent['cta']['button'];
+ctaButton.style.backgroundColor = 'grey';
 
 //CTA IMAGE
 
@@ -118,6 +143,9 @@ mainContent.getElementsByTagName('h4')[4].textContent = siteContent
 mainContent.getElementsByTagName('p')[4].textContent = siteContent
 ['main-content']['vision-content'];
 
+mainContent.style.backgroundColor = 'black';
+mainContent.style.color = '#7CEFFF';
+
 //CONTACT
 
 let contact = document.querySelector('.contact');
@@ -137,3 +165,5 @@ contact.getElementsByTagName('p')[2].textContent = siteContent
 //footer 
 let foot = document.querySelector('footer p');
 foot.textContent = siteContent.footer['copyright'];
+foot.style.backgroundColor = 'black';
+foot.style.color = '#E97CFF'
