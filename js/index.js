@@ -82,7 +82,7 @@ ctaImg.setAttribute('src', siteContent['cta']['img-src']);
 //MAIN CONTENT
 let mainContent = document.querySelector('.main-content');
 
-//because there are several h4 and p tags in different areas with different class names use getElementsByTagName(tag)[index] to create multiples of the same tag with differnet content.
+//because there are several h4 and p tags in different areas with different class names use getElementsByTagName(tag)[index] to create multiples of the same tag with different content.
 
 //First h4 and p tag
 mainContent.getElementsByTagName('h4')[0].textContent = siteContent
@@ -117,3 +117,23 @@ mainContent.getElementsByTagName('h4')[4].textContent = siteContent
 ['main-content']['vision-h4'];
 mainContent.getElementsByTagName('p')[4].textContent = siteContent
 ['main-content']['vision-content'];
+
+//CONTACT
+
+let contact = document.querySelector('.contact');
+
+//because there is and h4 and several p tags with different classNames/cotent use getElementsByTagName(tag)[index] to create multiples of the same tag with different content.
+
+contact.getElementsByTagName('h4')[0].textContent = siteContent
+['contact']['contact-h4'];
+
+contact.getElementsByTagName('p')[0].textContent = siteContent
+['contact']['address'];
+contact.getElementsByTagName('p')[1].textContent = siteContent
+['contact']['phone'];
+contact.getElementsByTagName('p')[2].textContent = siteContent
+['contact']['email'];
+
+//footer 
+let foot = document.querySelector('footer p');
+foot.textContent = siteContent.footer['copyright'];
