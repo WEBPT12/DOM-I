@@ -48,7 +48,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //NAV
 
-//create the variable and where you want your data to go(what tag, ID, or className)
+//create the variable and where you want your data to go/be(what tag, ID, or className)
 let navLinks = document.getElementsByTagName('a');
 
 //use [index] to establish an order of items on the same tag. since otherwise identical there is no need to create a new variable fo reach one.
@@ -63,7 +63,20 @@ navLinks[3].textContent = siteContent.nav['nav-item-4'];
 navLinks[4].textContent = siteContent.nav['nav-item-5'];
 navLinks[5].textContent = siteContent.nav['nav-item-6'];
 
-//CTA-TEXT
+//CTA-TEXT header and button
 
+// using querySelector will help me to find the exact className and tag
 let ctaHead = document.querySelector('.cta-text h1');
 ctaHead.textContent = siteContent['cta']['h1'];
+
+let ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent['cta']['button'];
+
+//CTA IMAGE
+//because the images use ID's use getElementById('idName')
+let ctaImg = document.getElementById('cta-img');
+//use setAttribute to assign a source for your image while also added the cotent
+ctaImg.setAttribute('src', siteContent['cta']['img-src']);
+
+
+
